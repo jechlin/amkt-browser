@@ -3,6 +3,11 @@ import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+fetch('https://marketplace.atlassian.com/rest/2/addons/com.onresolve.jira.groovy.groovyrunner/versions')
+    .then(resp => resp.json())
+    .then(json => console.log(json))
+
+
 const Home = props => (
     <div>
         <h1>Home</h1>
